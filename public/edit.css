@@ -1,0 +1,421 @@
+/* =========================================================
+   ADMIN GLOBAL STYLES
+   ========================================================= */
+
+body {
+    background: var(--color-neutral-100);
+    font-family: var(--font-main);
+}
+
+/* ================================
+   PAGE WRAPPER
+   ================================ */
+.admin-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+.admin-header {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-neutral-200);
+    position: relative;
+}
+
+.admin-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        var(--color-primary),
+        var(--color-secondary)
+    );
+    border-radius: 16px 16px 0 0;
+}
+
+.admin-header h1 {
+    color: var(--color-primary-dark);
+    margin-bottom: 8px;
+}
+
+.admin-header p {
+    color: var(--color-neutral-500);
+}
+
+/* ================================
+   CARDS
+   ================================ */
+.admin-card {
+    background: var(--color-white);
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-neutral-200);
+    transition: 0.3s ease;
+}
+
+.admin-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Card Title */
+.admin-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-neutral-200);
+    padding-bottom: 10px;
+}
+
+/* ================================
+   FORMS
+   ================================ */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-neutral-700);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--color-neutral-300);
+    font-family: var(--font-main);
+    transition: 0.3s ease;
+    background: var(--color-white);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 90, 142, 0.1);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ================================
+   SERVICE EDITOR BOX
+   ================================ */
+.service-editor {
+    background: var(--color-neutral-50);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--color-neutral-200);
+}
+
+/* ================================
+   SPECIAL UI ELEMENTS
+   ================================ */
+
+/* Section Box */
+.section-box {
+    background: var(--color-neutral-50);
+    border: 1px dashed var(--color-neutral-300);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Icon Preview */
+.icon-preview {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+}
+
+/* ================================
+   BUTTONS
+   ================================ */
+.save-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.save-btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.save-btn:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* ================================
+   RESPONSIVE SMALL ENHANCEMENT
+   ================================ */
+@media (max-width: 768px) {
+    .admin-page {
+        padding: 20px 15px;
+    }
+
+    .admin-card {
+        padding: 18px;
+    }
+
+    .save-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.alert-success {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 9999;
+    animation: fadeInDown 0.4s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.alert-success-custom{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: linear-gradient(135deg,#28a745,#20c997);
+    color: white;
+
+    padding: 15px 30px;
+    border-radius: 12px;
+
+    font-weight: 700;
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+
+    z-index: 9999;
+
+    animation: slideDown .5s ease;
+}
+
+@keyframes slideDown{
+    from{
+        opacity:0;
+        transform:translate(-50%,-30px);
+    }
+    to{
+        opacity:1;
+        transform:translate(-50%,0);
+    }
+}
+
+.alert-success-custom i{
+    font-size:22px;
+}
+
+.admin-card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #8b5cf6;
+    outline: none;
+}
+
+.add-btn {
+    background: #22c55e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #3b82f6;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background: #8b5cf6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* تحسين الحقول داخل الجدول */
+.admin-table input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    font-size: 14px;
+    background: #fff;
+}
+
+.admin-table input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 5px rgba(139, 92, 246, 0.3);
+}
+
+/* تحسين الأزرار */
+.save-btn,
+.delete-btn,
+.add-btn,
+.edit-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Hover effects */
+.save-btn:hover {
+    background: #7c3aed;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+.add-btn:hover {
+    background: #16a34a;
+}
+
+.edit-btn:hover {
+    background: #2563eb;
+}
+
+.success-alert {
+    background: #22c55e;
+    color: white;
+    padding: 12px 18px;
+    margin: 15px 0;
+    border-radius: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* اختفاء تدريجي */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.success-alert {
+    background: #22c55e;
+    color: white;
+    padding: 12px 18px;
+    margin: 15px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.highlight {
+    animation: flash 1s ease;
+}
+
+@keyframes flash {
+    0% { background: #fef9c3; }
+    100% { background: transparent; }
+}
