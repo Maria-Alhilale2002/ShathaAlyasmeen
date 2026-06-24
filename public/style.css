@@ -84,6 +84,7 @@ body {
   color: var(--color-neutral-700);
   line-height: 1.6;
   overflow-x: hidden;
+  margin: 0;
 }
 
 a {
@@ -1736,3 +1737,4 @@ footer {
 .service-card:hover i.service-icon{
     transform: scale(1.1);
 }
+

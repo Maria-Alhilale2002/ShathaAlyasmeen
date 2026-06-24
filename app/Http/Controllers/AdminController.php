@@ -15,30 +15,39 @@ class AdminController extends Controller
     }
 
     public function login(Request $request)
-    {
-        $admin = Admin::where(
-            'email',
-            $request->email
-        )->first();
+{
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required'
+    ], [
+        'email.required' => 'يرجى إدخال البريد الإلكتروني',
+        'email.email' => 'صيغة البريد الإلكتروني غير صحيحة',
+        'password.required' => 'يرجى إدخال كلمة المرور',
+    ]);
 
-        if (
-            !$admin ||
-            !Hash::check(
-                $request->password,
-                $admin->password
-            )
-        ) {
-            return back()
-                ->with('error', 'بيانات الدخول غير صحيحة');
-        }
+    $admin = Admin::where('email', $request->email)->first();
 
-        session([
-            'admin_id' => $admin->id,
-            'admin_logged' => true
-        ]);
-
-        return redirect('/admindashboard');
+    // البريد غير موجود
+    if (!$admin) {
+        return back()
+            ->withInput()
+            ->with('error', 'البريد الإلكتروني غير موجود');
     }
+
+    // كلمة المرور خاطئة
+    if (!Hash::check($request->password, $admin->password)) {
+        return back()
+            ->withInput()
+            ->with('error', 'كلمة المرور غير صحيحة');
+    }
+
+    session([
+        'admin_id' => $admin->id,
+        'admin_logged' => true
+    ]);
+
+    return redirect('/admindashboard');
+}
 
     public function logout()
     {

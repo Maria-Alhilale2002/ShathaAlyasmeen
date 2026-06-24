@@ -197,112 +197,124 @@
         <div class="services-admin-grid">
 
         <!-- الخدمة 1 -->
-
+<div class="form-group">
 <input
     type="text"
     name="services_icon1"
     value="{{ old('services_icon1', $home->services_icon1) }}"
     placeholder="الأيقونة">
-
+</div>
+<div class="form-group">
 <input
     type="text"
     name="services_title1"
     value="{{ old('services_title1', $home->services_title1) }}"
     placeholder="اسم الخدمة">
-
+</div>
+<div class="form-group">
 <textarea
-    name="services_description1">{{ old('services_description1', $home->services_description1) }}</textarea>
+    name="services_description1" placeholder="وصف الخدمة">{{ old('services_description1', $home->services_description1) }}</textarea>
 
-
+</div>
 <!-- الخدمة 2 -->
-
+<div class="form-group">
 <input
     type="text"
     name="services_icon2"
     value="{{ old('services_icon2', $home->services_icon2) }}"
     placeholder="الأيقونة">
-
+</div>
+<div class="form-group">
 <input
     type="text"
     name="services_title2"
     value="{{ old('services_title2', $home->services_title2) }}"
     placeholder="اسم الخدمة">
-
+</div>
+<div class="form-group">
 <textarea
-    name="services_description2">{{ old('services_description2', $home->services_description2) }}</textarea>
+    name="services_description2" placeholder="وصف الخدمة">{{ old('services_description2', $home->services_description2) }}</textarea>
 
-
+</div>
 <!-- الخدمة 3 -->
-
+<div class="form-group">
 <input
     type="text"
     name="services_icon3"
     value="{{ old('services_icon3', $home->services_icon3) }}"
     placeholder="الأيقونة">
-
+</div>
+<div class="form-group">
 <input
     type="text"
     name="services_title3"
     value="{{ old('services_title3', $home->services_title3) }}"
     placeholder="اسم الخدمة">
-
+</div>
+<div class="form-group">
 <textarea
-    name="services_description3">{{ old('services_description3', $home->services_description3) }}</textarea>
-
+    name="services_description3" placeholder="وصف الخدمة">{{ old('services_description3', $home->services_description3) }}</textarea>
+</div>
 
 <!-- الخدمة 4 -->
-
+<div class="form-group">
 <input
     type="text"
     name="services_icon4"
     value="{{ old('services_icon4', $home->services_icon4) }}"
     placeholder="الأيقونة">
-
+</div>
+<div class="form-group">
 <input
     type="text"
     name="services_title4"
     value="{{ old('services_title4', $home->services_title4) }}"
     placeholder="اسم الخدمة">
-
+</div>
+<div class="form-group">
 <textarea
-    name="services_description4">{{ old('services_description4', $home->services_description4) }}</textarea>
-
+    name="services_description4" placeholder="وصف الخدمة">{{ old('services_description4', $home->services_description4) }}</textarea>
+</div>
 
 <!-- الخدمة 5 -->
-
+<div class="form-group">
 <input
     type="text"
     name="services_icon5"
     value="{{ old('services_icon5', $home->services_icon5) }}"
     placeholder="الأيقونة">
-
+</div>
+<div class="form-group">
 <input
     type="text"
     name="services_title5"
     value="{{ old('services_title5', $home->services_title5) }}"
     placeholder="اسم الخدمة">
-
+</div>
+<div class="form-group">
 <textarea
-    name="services_description5">{{ old('services_description5', $home->services_description5) }}</textarea>
-
+    name="services_description5" placeholder="وصف الخدمة">{{ old('services_description5', $home->services_description5) }}</textarea>
+</div>
 
 <!-- الخدمة 6 -->
-
+<div class="form-group">
 <input
     type="text"
     name="services_icon6"
     value="{{ old('services_icon6', $home->services_icon6) }}"
     placeholder="الأيقونة">
-
+</div>
+<div class="form-group">
 <input
     type="text"
     name="services_title6"
     value="{{ old('services_title6', $home->services_title6) }}"
     placeholder="اسم الخدمة">
-
+</div>
+<div class="form-group">
 <textarea
-    name="services_description6">{{ old('services_description6', $home->services_description6) }}</textarea>
-
+    name="services_description6" placeholder="وصف الخدمة">{{ old('services_description6', $home->services_description6) }}</textarea>
+</div>
         </div>
 
     </div>
