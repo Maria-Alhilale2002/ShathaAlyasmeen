@@ -36,7 +36,7 @@
             <li>
                 📱
                 <span dir="ltr">
-                    {{ $contact?->phone1 ?? '+966 50 123 4567' }}
+                    {{ $contact?->phone1 ?? '+966 573 745 238' }}
                 </span>
             </li>
 

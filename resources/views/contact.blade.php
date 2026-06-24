@@ -34,8 +34,8 @@
                     <div class="info-details">
                         <h4>العنوان</h4>
                         <p>
-                            {{ $contact?->city ?? 'الدمام , المملكة العربية السعودية' }} <br>
-                            {{ $contact?->address ?? 'شارع الأمير محمد بن فهد ' }}
+                            {{ $contact?->city ?? 'جازان , المملكة العربية السعودية' }} <br>
+                            {{ $contact?->address ?? 'طريق الأمير محمد بن عبدالعزيز , مخطط الورود ' }}
                         </p>
                     </div>
                 </div>
@@ -49,10 +49,10 @@
                     <div class="info-details">
                         <h4>رقم الهاتف</h4>
 
-                        <p dir="ltr">{{ $contact?->phone1 ?? '+966 50 123 4567' }}</p>
+                        <p dir="ltr">{{ $contact?->phone1 ?? '+966 573 745 238' }}</p>
 
                         @if(!empty($contact?->phone2))
-                            <p dir="ltr">{{ $contact->phone2 ?? '+966 13 456 7890' }}</p>
+                            <p dir="ltr">{{ $contact->phone2 ?? '+966 573 745 238' }}</p>
                         @endif
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                     <div class="info-details">
                         <h4>واتساب</h4>
 
-                        <p dir="ltr">{{ $contact?->whatsapp ?? '+966 50 123 4567' }}</p>
+                        <p dir="ltr">{{ $contact?->whatsapp ?? '+966 573 745 238' }}</p>
                     </div>
                 </div>
 
@@ -139,7 +139,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         return;
     }
 
-    let whatsappNumber = "967778274221";
+    let whatsappNumber = "966573745238";
 
     let text =
 `مرحباً، لدي طلب من موقع شذى الياسمين:
